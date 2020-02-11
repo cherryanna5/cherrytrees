@@ -6,8 +6,8 @@
 puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrD
 h+drA=="
  crossorigin=""/>
- <script src = "C:/Users/cherry5/Documents/UNC/Senior Year/Spring 2019/GEOG 456/Leaflet Tour/leaflet_tutorial/data/old_well_4326.geojson"></script>
- <script src = "C:/Users/cherry5/Documents/UNC/Senior Year/Spring 2019/GEOG 456/Leaflet Tour/leaflet_tutorial/data/flowering_cherries_4326.geojson"></script><script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+ <script src = "data/flowering_cherries_4326.geojson"></script>
+ <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
  integrity="sha512-
 QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw
 5lwrg=="
@@ -31,26 +31,26 @@ QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Q
                  .bindPopup('Carolina Hall') // YOU CAN CHANGE THE MESSAGE
                  .openPopup();
 
-                 L.geoJSON(uncwell).addTo(map)
+                //  L.geoJSON(uncwell).addTo(map)
 
-                 var uncIcon = L.icon({ // notice the L.icon which is a Leaflet object with properties
-                iconUrl: 'https://identity.unc.edu/files/2014/01/Old_Well_Graphic_twitter.jpg',
-                // this points to a jpg image obtained from the internet
-                iconSize: [50,50], // size of the icon
-                popupAnchor: [0,0] // where the icon is located relative to the lat lon of the point.
-                });
-                //YOU COULD CHANGE the iconURL, iconSize and popupAnchor to see how the map changes
-                // create an HTML variable that will pop up with a UNC Well photo
-                var customPopup = "UNC Well<br/><img src='https://static1.squarespace.com/static/57d17e77b8a79bfa4e31641d/t/58a22fd0bebafb51 6ad2404a/1487024089479/unc+well.png?format=1500w' width='100px'/>";
-                // YOU COULD CHANGE the https link to another picture.
-                // YOU COULD CHANGE the 100px to other values like 50px or 400px to see what happens
-                // the following line should go at the end, before script closing tag
-                L.geoJSON(uncwell, { // a
-                pointToLayer: function (feature, latlng) { // b
-                return L.marker(latlng, {icon: uncIcon});}}) // c
-                .bindPopup(customPopup) // d
-                .addTo(map); // 
-                L.geoJSON(uncwell).addTo(map)
+                //  var uncIcon = L.icon({ // notice the L.icon which is a Leaflet object with properties
+                // iconUrl: 'https://identity.unc.edu/files/2014/01/Old_Well_Graphic_twitter.jpg',
+                // // this points to a jpg image obtained from the internet
+                // iconSize: [50,50], // size of the icon
+                // popupAnchor: [0,0] // where the icon is located relative to the lat lon of the point.
+                // });
+                // //YOU COULD CHANGE the iconURL, iconSize and popupAnchor to see how the map changes
+                // // create an HTML variable that will pop up with a UNC Well photo
+                // var customPopup = "UNC Well<br/><img src='https://static1.squarespace.com/static/57d17e77b8a79bfa4e31641d/t/58a22fd0bebafb51 6ad2404a/1487024089479/unc+well.png?format=1500w' width='100px'/>";
+                // // YOU COULD CHANGE the https link to another picture.
+                // // YOU COULD CHANGE the 100px to other values like 50px or 400px to see what happens
+                // // the following line should go at the end, before script closing tag
+                // L.geoJSON(uncwell, { // a
+                // pointToLayer: function (feature, latlng) { // b
+                // return L.marker(latlng, {icon: uncIcon});}}) // c
+                // .bindPopup(customPopup) // d
+                // .addTo(map); // 
+                // L.geoJSON(uncwell).addTo(map)
 
                  var cherryicon = L.icon({ // notice the L.icon which is a Leaflet object with properties
                 iconUrl: 'https://cdn1.iconfinder.com/data/icons/food-vol-2-1-3/65/15-512.png',
